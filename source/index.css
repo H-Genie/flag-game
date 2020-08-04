@@ -1,0 +1,244 @@
+@import url("reset.css");
+
+@font-face {
+  font-family: 'nanum-round';
+  src: url(NanumSquareRoundEB.ttf);
+}
+
+@font-face { 
+  font-family: 'NeoDunggeunmo'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+* {  
+  font-family: 'nanum-round';
+}
+
+.content_container {
+  width: 100%;
+  max-width: 1366px;
+  height: 100%;
+  transform: translate(-50%,-50%);  
+  background-image: url(../img/background_01.jpg);
+  background-size: cover;
+  background-position: center;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#ready {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 10rem;
+  color: red;
+  width: 100%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rule {
+  background-color: rgba(255,255,255,0.5);
+  border: 1px solid black;
+  border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 2rem;
+  color: black;
+  padding: 2rem;
+}
+
+#score {
+  width: 180px;
+  height: 100px;
+  font-size: 4rem;
+  border:  1px solid black;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 4px;
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+}
+
+#score::before {
+  content: 'Score';  
+  position: absolute;  
+  font-size: 1rem;
+  left: 4px;
+  top: 4px;
+}
+
+#round {
+  position: absolute;
+  top: 5rem;
+  left: 50%;  
+  transform: translate(-50%);
+  font-size: 6rem;
+  display: none;
+}
+
+.character {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timebar {  
+  width: 300px;
+  height: 20px;
+  
+  position: absolute;
+  left: 50%;
+  bottom: 32%;
+  transform: translate(-50%);      
+}
+
+.progress {
+  width: 0;  
+  height: 100%;
+  background-color: red;    
+}
+
+#mission {
+  width: 680px;
+  height: 90px;
+  font-family: NeoDunggeunmo;
+  font-size: 3rem;
+  border:  1px solid black;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%);
+}
+
+.game_button {
+  width: 50px;
+  height: 50px;
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 10px; 
+  box-shadow: 0 9px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: NeoDunggeunmo;
+}
+
+.game_button:hover {background-color: #3e8e41}
+
+.game_button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.reset {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: #718F38;
+  border-radius: 50%;
+}
+
+.start {
+  position: absolute;
+  left: 38%;
+  bottom: 9%;
+}
+
+.start:hover {
+  cursor: pointer;
+}
+
+.button_wrap {
+  display: flex;
+  width: 120px;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translate(-50%);
+}
+
+.mission_button {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(0,0,0,0.6);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  cursor: pointer;
+  margin: 0 5px 5px 0;
+}
+
+.mission_button:hover {
+  background-color: yellow;
+  opacity: 0.5;
+  transition: all 0.2s;
+}
+
+.blue_up {
+  background-image: url(../img/button_blue_up.png);
+}
+
+.white_up {
+  background-image: url(../img/button_white_up.png);
+}
+
+.blue_down {
+  background-image: url(../img/button_blue_down.png);
+}
+
+.white_down {
+  background-image: url(../img/button_white_down.png);
+}
+
+.stop {
+  position: absolute;
+  right: 39%;
+  bottom: 9%;
+  background-color: #B04C78;
+}
+
+.stop:hover {
+ cursor: pointer;
+}
+
+.heart_container {
+  position: absolute;
+  top:2%;
+  right: 2rem;
+}
+
+.heart {
+  width: 50px;
+  height: 50px;
+  margin-right: -10px;
+}
+.heart:last-child {
+  margin-right: 0px;
+}
