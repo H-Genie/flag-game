@@ -118,7 +118,7 @@ function calculate_score() {
         clickStop();
         document.getElementById('round').innerHTML = `${round} Round`;
         document.getElementsByClassName('start')[0].removeEventListener("click",clickStart);
-        document.getElementById('mission').innerHTML = "GAME OVER. 계속하려면 리셋버튼을 눌러주세요";
+        document.getElementById('mission').innerHTML = "GAME OVER. 계속하려면 리셋버튼을 눌러주세요";        
         document.getElementById('mission').style="font-size:1.8rem;";
     }
 
@@ -148,6 +148,7 @@ var interval_generate_random_number, interval_generate_mission, progress_bar;
 function clickStart() {    
     interval_generate_random_number = setInterval(generate_random_number,2000);
     interval_generate_mission = setInterval(generate_mission,2000);
+    document.getElementsByClassName('character')[0].firstElementChild.src="img/start.png";
     
     // countdown 2,1,""
     document.getElementById('ready').innerHTML=2;
@@ -191,6 +192,7 @@ function clickStop() {
     document.getElementsByClassName('timebar')[0].style="border:none;"; 
     document.getElementsByClassName('progress')[0].style="width:0;";
     document.getElementById('mission').innerHTML = "게임을 다시 시작해주세요";
+    document.getElementsByClassName('character')[0].firstElementChild.src="img/end.png";
     bgm.pause();
 
     // remove stop button, add start button
