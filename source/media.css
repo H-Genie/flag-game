@@ -26,12 +26,12 @@
         position: absolute;
         width: 100px;
         height: 100px;
-        background-color: yellow;
+        /* background-color: yellow; */
     }
 
     .mission_button:hover {
-        background-color: yellow; 
-        opacity: 1;
+        /* background-color: yellow;  */
+        opacity: 0.5;
         transition: none;
     }
 

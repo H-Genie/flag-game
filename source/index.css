@@ -139,20 +139,18 @@
 }
 
 .game_button {
-    width: 50px;
-    height: 50px;
-    color: white;
-    background-color: #4caf50;
-    border-radius: 10px;
-    box-shadow: 0 9px #999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: NeoDunggeunmo;
+  color: #705b3a;
+  background-color: #fbcb80;
+  border-radius: 10px;
+  box-shadow: 0 9px #b08f5b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: NeoDunggeunmo;
 }
 
 .game_button:hover {
-    background-color: #3e8e41;
+    opacity: 0.5;
 }
 
 .game_button:active {
@@ -165,14 +163,18 @@
     position: absolute;
     top: 2rem;
     left: 2rem;
-    background-color: #718f38;
-    border-radius: 50%;
+    width: 100px;
+    height: 50px;
 }
 
 .start {
     position: absolute;
     left: 38%;
     bottom: 9%;
+    background-image: url(../img/game_start.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
 }
 
 .start:hover {
@@ -192,7 +194,7 @@
 .mission_button {
     width: 50px;
     height: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    /* border: 1px solid rgba(0, 0, 0, 0.6); */
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -203,7 +205,7 @@
 }
 
 .mission_button:hover {
-    background-color: yellow;
+    /* background-color: yellow; */
     opacity: 0.5;
     transition: all 0.2s;
 }
@@ -228,7 +230,10 @@
     position: absolute;
     right: 39%;
     bottom: 9%;
-    background-color: #b04c78;
+    background-image: url(../img/game_pause.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
 }
 
 .stop:hover {
